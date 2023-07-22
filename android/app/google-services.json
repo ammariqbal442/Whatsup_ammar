@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1063983382805",
+    "project_id": "whatsupapplication-c2074",
+    "storage_bucket": "whatsupapplication-c2074.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1063983382805:android:b82eabb5ce65999562291c",
+        "android_client_info": {
+          "package_name": "com.example.whatsupp_application"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1063983382805-st66kmlj1dgk7h8a77lhfp922g79lm38.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAaU_2Qfm3dhsJ6CVP9F9cgd2IHC2H5hgQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1063983382805-st66kmlj1dgk7h8a77lhfp922g79lm38.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
