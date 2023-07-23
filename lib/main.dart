@@ -2,6 +2,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:whatsupp_application/features/landing/welcome_whatsup.dart';
 import 'package:whatsupp_application/firebase_options.dart';
+import 'package:whatsupp_application/routes.dart';
 
 
 import 'package:whatsupp_application/screens/web_layout_screen.dart';
@@ -16,7 +17,6 @@ void main()  async{
   );
   runApp(const MyApp());
 }
-
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
@@ -28,10 +28,9 @@ class MyApp extends StatelessWidget {
       theme: ThemeData.dark().copyWith(
         scaffoldBackgroundColor: backgroundColor,
       ),
-      home: const ResponsiveLayout(
-        mobileScreenLayout: Welcome_Screen(),
-        webScreenLayout: WebLayoutScreen(),
-      ),
+      onGenerateRoute: (settings) => generateRoute(settings), // Fix the parameter name here
+      home: const Welcome_Screen(),
     );
   }
 }
+

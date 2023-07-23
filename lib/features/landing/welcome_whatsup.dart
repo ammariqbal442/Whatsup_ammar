@@ -7,14 +7,22 @@ import 'package:flutter/material.dart';
 import 'package:whatsupp_application/buttons/custom_buttons.dart';
 import 'package:whatsupp_application/colors.dart';
 
+import '../../screens/login_ui.dart';
+
 class Welcome_Screen extends StatefulWidget {
   const Welcome_Screen({super.key});
+ 
 
   @override
+  
   State<Welcome_Screen> createState() => _Welcome_ScreenState();
 }
 
 class _Welcome_ScreenState extends State<Welcome_Screen> {
+   void navigateToLoginScreen(BuildContext context)
+  {
+    Navigator.pushNamed(context, LoginWhatsup.routeName);
+  }
   @override
   
   Widget build(BuildContext context) {
@@ -66,7 +74,11 @@ SizedBox(
   
   width: size.width * 0.70,
 height: size.height /15,
-child:CustomButton(text: "Agree & Continue ", onPressed: (){},)
+child:CustomButton(text: "Agree & Continue ", onPressed: (){
+  navigateToLoginScreen(context);
+
+  
+},)
  ),
 
 
