@@ -1,20 +1,23 @@
 import 'package:country_picker/country_picker.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../buttons/custom_buttons.dart';
 import '../colors.dart';
+import '../features/auth/controller/auth_controller.dart';
+import '../features/common/utils.dart';
 
 
-class LoginWhatsup extends StatefulWidget {
+class LoginWhatsup extends ConsumerStatefulWidget {
   static const routeName = '/login-ui';
 
   const LoginWhatsup({Key? key}) : super(key: key);
 
   @override
-  State<LoginWhatsup> createState() => _LoginWhatsupState();
+  ConsumerState<LoginWhatsup> createState() => _LoginWhatsupState();
 }
 
-class _LoginWhatsupState extends State<LoginWhatsup> {
+class _LoginWhatsupState extends ConsumerState<LoginWhatsup> {
   final phoneController = TextEditingController();
   Country? country;
 
@@ -31,6 +34,15 @@ class _LoginWhatsupState extends State<LoginWhatsup> {
       });
     }
     );
+  }
+   void sendPhoneNumber() {
+    String phoneNumber = phoneController.text.trim();
+    if (country != null && phoneNumber.isNotEmpty) {
+      ref.read(authControllerProvider)
+          .signInWithPhone(context, '+${country!.phoneCode}$phoneNumber');
+    } else {
+      showSnackBar(context: context, content: 'Fill out all the fields');
+    }
   }
 
   @override
@@ -83,9 +95,7 @@ class _LoginWhatsupState extends State<LoginWhatsup> {
                     height: size.height / 18,
                     child: CustomButton(
                       text: "Next",
-                      onPressed: () {
-                        // Add the functionality you want for the button here
-                      },
+                      onPressed: sendPhoneNumber
                     ),
                   ),
                 ),

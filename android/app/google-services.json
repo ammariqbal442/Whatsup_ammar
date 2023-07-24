@@ -14,6 +14,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "1063983382805-lc7f3it74jdkogajch5prjdc8sj708ok.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.whatsupp_application",
+            "certificate_hash": "303b9d64ae2d6139e1e3c654a9a1f72547187096"
+          }
+        },
+        {
           "client_id": "1063983382805-st66kmlj1dgk7h8a77lhfp922g79lm38.apps.googleusercontent.com",
           "client_type": 3
         }
@@ -29,6 +37,13 @@
             {
               "client_id": "1063983382805-st66kmlj1dgk7h8a77lhfp922g79lm38.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "1063983382805-kl100fud5batpgp76paslmbtb5gt2k02.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.whatsuppApplication"
+              }
             }
           ]
         }
